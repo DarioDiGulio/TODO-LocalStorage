@@ -72,7 +72,7 @@ formularioUI.addEventListener('submit', (e) => {
 document.addEventListener('DOMContentLoaded', GetCurrentState)
 
 actividadesUI.addEventListener('click', (e) => {
-    let actividad = e.path[2].childNodes[3].innerHTML
+    let actividad = e.target.parentNode.previousSibling.innerText
     switch (e.target.innerText) {
         case 'delete':
             BorrarActividad(actividad)
